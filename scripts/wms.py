@@ -12,7 +12,7 @@ from loguru import logger
 # ---- Import helper functions ----
 try:
     try:
-        from helpers.misc import image_metadata_to_world_file, bounds_to_bbox, format_logger, BadFileExtensionException
+        from helpers.misc import image_metadata_to_world_file, image_metadata_to_world_file, format_logger, BadFileExtensionException
     except ModuleNotFoundError:
         from misc import image_metadata_to_world_file, bounds_to_bbox, format_logger, BadFileExtensionException
 except Exception as e:
