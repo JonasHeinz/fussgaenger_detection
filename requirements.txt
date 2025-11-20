@@ -1,0 +1,13 @@
+# install gdal with conda=3.2.1?
+fiona
+rtree
+geopandas
+joblib
+pillow
+pyyaml
+rasterio
+requests
+supermercado
+tqdm
+opencv-python
+plotly
