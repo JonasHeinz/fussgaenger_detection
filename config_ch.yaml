@@ -17,7 +17,7 @@ generate_tilesets.py:
       type: WMS # supported values: 1. MIL = Map Image Layer 2. WMS
       url: https://wms.geo.admin.ch/service
       layers: ch.swisstopo.swissimage
-      srs: "EPSG:3857"
+      srs: "EPSG:2056"
   output_folder: output_CH
   tile_size: 512 # per side, in pixels
   overwrite: False
@@ -32,7 +32,7 @@ generate_tilesets.py:
       name: Unknown
       url:
     category:
-        name: "farmyard"
+        name: "fussgaengerstreifen"
         supercategory: "infrastructure"
         
 train_model.py:
