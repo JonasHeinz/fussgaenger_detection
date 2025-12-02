@@ -4,7 +4,7 @@ prepare_data.py:
     ground_truth_swimming_pools_shapefile: data/labels_fussgaengerstreifen.shp
     other_sectors_shapefile: data/prediction_labels.shp
     other_swimming_pools_shapefile: data/prediction_labels.shp
-  zoom_level: 16
+  zoom_level: 17
   output_folder: output_CH
 
 generate_tilesets.py:
