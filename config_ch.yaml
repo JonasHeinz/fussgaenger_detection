@@ -10,7 +10,7 @@ prepare_data.py:
 generate_tilesets.py:
   debug_mode: False
   datasets:
-    aoi_tiles_geojson: output_CH/aoi_z16_tiles.geojson
+    aoi_tiles_geojson: output_CH/aoi_z17_tiles.geojson
     ground_truth_labels_geojson: output_CH/ground_truth_labels.geojson
     other_labels_geojson: output_CH/other_labels.geojson
     orthophotos_web_service:
@@ -27,39 +27,39 @@ generate_tilesets.py:
     version: 1.0
     description: 2018-20 Swissimage
     contributor: swisstopo
-    url: 
+    url:
     license:
       name: Unknown
       url:
     category:
-        name: "fussgaengerstreifen"
-        supercategory: "infrastructure"
-        
+      name: "fussgaengerstreifen"
+      supercategory: "infrastructure"
+
 train_model.py:
-    working_folder: output_CH
-    log_subfolder: logs
-    sample_tagged_img_subfolder: sample_training_images
-    COCO_files: # relative paths, w/ respect to the working_folder
-        trn: COCO_trn.json
-        val: COCO_val.json
-        tst: COCO_tst.json
-    detectron2_config_file: '../detectron2_config_ch.yaml' # path relative to the working_folder
-    model_weights:
-        model_zoo_checkpoint_url: "COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_1x.yaml"
-        
+  working_folder: output_CH
+  log_subfolder: logs
+  sample_tagged_img_subfolder: sample_training_images
+  COCO_files: # relative paths, w/ respect to the working_folder
+    trn: COCO_trn.json
+    val: COCO_val.json
+    tst: COCO_tst.json
+  detectron2_config_file: "../detectron2_config_ch.yaml" # path relative to the working_folder
+  model_weights:
+    model_zoo_checkpoint_url: "COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_1x.yaml"
+
 make_predictions.py:
-    working_folder: output_CH
-    log_subfolder: logs
-    sample_tagged_img_subfolder: sample_prediction_images
-    COCO_files: # relative paths, w/ respect to the working_folder
-        trn: COCO_trn.json
-        val: COCO_val.json
-        tst: COCO_tst.json
-        oth: COCO_oth.json
-    detectron2_config_file: '../detectron2_config_ch.yaml' # path relative to the working_folder
-    model_weights:
-        pth_file: './logs/model_final.pth'
-  
+  working_folder: output_CH
+  log_subfolder: logs
+  sample_tagged_img_subfolder: sample_prediction_images
+  COCO_files: # relative paths, w/ respect to the working_folder
+    trn: COCO_trn.json
+    val: COCO_val.json
+    tst: COCO_tst.json
+    oth: COCO_oth.json
+  detectron2_config_file: "../detectron2_config_ch.yaml" # path relative to the working_folder
+  model_weights:
+    pth_file: "./logs/model_final.pth"
+
 assess_predictions.py:
   datasets:
     ground_truth_labels_geojson: output_CH/ground_truth_labels.geojson
