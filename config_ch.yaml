@@ -4,13 +4,13 @@ prepare_data.py:
     ground_truth_swimming_pools_shapefile: data/labels_fussgaengerstreifen.shp
     other_sectors_shapefile: data/prediction_labels.shp
     other_swimming_pools_shapefile: data/prediction_labels.shp
-  zoom_level: 17
+  zoom_level: 18
   output_folder: output_CH
 
 generate_tilesets.py:
   debug_mode: False
   datasets:
-    aoi_tiles_geojson: output_CH/aoi_z17_tiles.geojson
+    aoi_tiles_geojson: output_CH/aoi_z18_tiles.geojson
     ground_truth_labels_geojson: output_CH/ground_truth_labels.geojson
     other_labels_geojson: output_CH/other_labels.geojson
     orthophotos_web_service:
