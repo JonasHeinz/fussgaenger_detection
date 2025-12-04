@@ -58,7 +58,7 @@ make_predictions.py:
     oth: COCO_oth.json
   detectron2_config_file: "../detectron2_config_ch.yaml" # path relative to the working_folder
   model_weights:
-    pth_file: "./logs/model_final.pth"
+    pth_file: "./logs/model_0000449.pth"
 
 assess_predictions.py:
   datasets:
