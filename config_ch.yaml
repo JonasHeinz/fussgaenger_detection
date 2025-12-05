@@ -1,8 +1,8 @@
 prepare_data.py:
   datasets:
-    ground_truth_sectors_shapefile: data/aoi.shp
+    ground_truth_sectors_shapefile: data/labels_fussgaengerstreifen.shp
     ground_truth_swimming_pools_shapefile: data/labels_fussgaengerstreifen.shp
-    other_sectors_shapefile: data/prediction_labels.shp
+    other_sectors_shapefile: data/aoi.shp
     other_swimming_pools_shapefile: data/prediction_labels.shp
   zoom_level: 18
   output_folder: output_CH
