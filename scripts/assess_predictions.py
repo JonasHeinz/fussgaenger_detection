@@ -166,7 +166,10 @@ if __name__ == '__main__':
             metrics[dataset] = []
 
         metrics_df_dict = {}
-        thresholds = np.arange(0.05, 1., 0.05)
+        thresholds = np.concatenate([
+            np.arange(0.05, 0.91, 0.05),   # 0.05–0.90 in 0.05 Schritten
+            np.arange(0.95, 1.001, 0.01)   # 0.95–1.00 in 0.01 Schritten
+        ])
 
         outer_tqdm_log = tqdm(total=len(metrics.keys()), position=0)
 
